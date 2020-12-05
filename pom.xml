@@ -10,8 +10,8 @@
 	<name>server2</name>
 
 	<properties>
-		<java.version>1.6</java.version>
-		<spring.version>3.1.0.RELEASE</spring.version>
+		<java.version>1.8</java.version>
+		<spring.version>5.3.1</spring.version>
 		<cglib.version>2.2.2</cglib.version>
 	</properties>
 
@@ -28,7 +28,17 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
-		<dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-core</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+        <dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-orm</artifactId>
 			<version>${spring.version}</version>
@@ -44,13 +54,13 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- CGLib for @Configuration -->
-		<dependency>
-			<groupId>cglib</groupId>
-			<artifactId>cglib-nodep</artifactId>
-			<version>${cglib.version}</version>
-			<scope>runtime</scope>
-		</dependency>
+<!--		&lt;!&ndash; CGLib for @Configuration &ndash;&gt;-->
+<!--		<dependency>-->
+<!--			<groupId>cglib</groupId>-->
+<!--			<artifactId>cglib-nodep</artifactId>-->
+<!--			<version>${cglib.version}</version>-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
 
 
 		<!-- Servlet Spec -->
@@ -66,7 +76,7 @@
 			<version>2.1</version>
 			<scope>provided</scope>
 		</dependency>
-	</dependencies>
+    </dependencies>
 
 <!--	<repositories>-->
 <!--		<repository>-->
